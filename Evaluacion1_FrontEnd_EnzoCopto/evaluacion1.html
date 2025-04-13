@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - El Aniquilador del hambre | Comida al paso</title>
+</head>
+<body>
+<div class="contenido_encabezado">
+    <div class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="navbar-links" id="navbar-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contactanos</a>
+        </div>
+    </div>
+    <img src="imagenes/Banner-Blog-cocina chilena.jpg" alt="Foto de empanadas al horno con un plato con pebre representando comida casera y nacional Chilena" class="imagen_principal"> 
+    <h1 class="titulo">Comida al paso "El Aniquilador del hambre"</h1>
+    <main class="carrusel">
+    </main>
+</div>
+
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbarLinks = document.getElementById('navbar-links');
+
+    mobileMenu.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
