@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="stylesheet" href="css/css.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - El Aniquilador del hambre | Comida al paso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .categoria-carousel {
+            display: none;
+        }
+        .categoria-carousel.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <div class="contenido_encabezado">
@@ -17,23 +26,199 @@
         <div class="navbar-links" id="navbar-links">
             <a href="#inicio">Inicio</a>
             <a href="#about">Sobre Nosotros</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contactanos</a>
+            <a href="#servicios">Contactanos</a>
         </div>
     </div>
-    <img src="imagenes/Banner-Blog-cocina chilena.jpg" alt="Foto de empanadas al horno con un plato con pebre representando comida casera y nacional Chilena" class="imagen_principal"> 
-    <h1 class="titulo">Comida al paso "El Aniquilador del hambre"</h1>
-    <main class="carrusel">
+
+    <div class="imagen-container">
+        <img src="imagenes/empanadas_pebre.jpg" alt="Comida chilena tradicional" class="imagen_principal">
+        <h1 class="titulo">Comida al paso "El Aniquilador del hambre"</h1>
+    </div>
+
+    <main class="carta-container">
+        <h2 class="seccion-titulo">Nuestra Carta</h2>
+
+        <div class="categoria-selector">
+            <input type="radio" id="sandwiches" name="categoria" checked hidden>
+            <label for="sandwiches" class="categoria-btn">Sandwiches</label>
+
+            <input type="radio" id="platos" name="categoria" hidden>
+            <label for="platos" class="categoria-btn">Platos</label>
+
+            <input type="radio" id="bebestibles" name="categoria" hidden>
+            <label for="bebestibles" class="categoria-btn">Bebestibles</label>
+
+            <input type="radio" id="postres" name="categoria" hidden>
+            <label for="postres" class="categoria-btn">Postres</label>
+        </div>
+
+        <div id="carouselSandwiches" class="carousel slide categoria-carousel active" data-bs-ride="carousel" data-categoria="sandwiches">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes/sandwich1.jpg" class="d-block w-100 item-imagen-carrusel" alt="Churrasco italiano">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Churrasco Italiano</h5>
+                        <p class="ingredientes-carrusel">Carne de res, palta, tomate, mayonesa casera en pan frica - $5.990</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/sandwich2.jpg" class="d-block w-100 item-imagen-carrusel" alt="Barros Luco">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Barros Luco</h5>
+                        <p class="ingredientes-carrusel">Lomo de res con queso derretido en pan frica - $6.490</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/sandwich3.jpg" class="d-block w-100 item-imagen-carrusel" alt="Ave mayo">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Completo Italiano</h5>
+                        <p class="ingredientes-carrusel">Vianesa, Tomate en cubos, Palta, Mayonesa casera en pan de completo - $2.990</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSandwiches" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSandwiches" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <div id="carouselPlatos" class="carousel slide categoria-carousel" data-bs-ride="carousel" data-categoria="platos">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes/plato1.jpg" class="d-block w-100 item-imagen-carrusel" alt="Cazuela chilena">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Pastel de Choclo</h5>
+                        <p class="ingredientes-carrusel">Pino de carne, pollo, huevo, pasas y masa de choclo - $7.490</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/plato2.jpg" class="d-block w-100 item-imagen-carrusel" alt="Pastel de choclo">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Cazuela Chilena</h5>
+                        <p class="ingredientes-carrusel">Carne de Vacuno, Papas, Choclo, zapallo y arroz - $6.490</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/plato3.jpg" class="d-block w-100 item-imagen-carrusel" alt="Porotos con riendas">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Curanto</h5>
+                        <p class="ingredientes-carrusel">Surtido de mariscos con caldo, Papas, Longaniza, Carne Ahumada y Chapaleles - $8.490</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlatos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPlatos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <div id="carouselBebestibles" class="carousel slide categoria-carousel" data-bs-ride="carousel" data-categoria="bebestibles">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes/bebida2.jpeg" class="d-block w-100 item-imagen-carrusel" alt="Mote con huesillo">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Jugo Natural</h5>
+                        <p class="ingredientes-carrusel">Jugo de fruta natural (piña, frutilla o naranja) - $2.490</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/bebida3.jpg" class="d-block w-100 item-imagen-carrusel" alt="Jugo natural">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Bebidas</h5>
+                        <p class="ingredientes-carrusel">Gaseosas y aguas minerales (500ml) - $1.990</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/bebida1.jpg" class="d-block w-100 item-imagen-carrusel" alt="Bebidas">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Cerveza</h5>
+                        <p class="ingredientes-carrusel">Cerveza Artesanal (500ml) - $3.490</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBebestibles" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBebestibles" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <div id="carouselPostres" class="carousel slide categoria-carousel" data-bs-ride="carousel" data-categoria="postres">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes/postre1.jpg" class="d-block w-100 item-imagen-carrusel" alt="Leche asada">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Torta de mil hoja</h5>
+                        <p class="ingredientes-carrusel">Porcion de torta de mil hoja con Manjar - $4.490</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/postre2.jpg" class="d-block w-100 item-imagen-carrusel" alt="Mote con huesillo">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Leche Asada</h5>
+                        <p class="ingredientes-carrusel">Postre tradicional de leche horneada con caramelo - $3.000</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/postre3.jpg" class="d-block w-100 item-imagen-carrusel" alt="Panqueques con manjar">
+                    <div class="carousel-caption item-info-carrusel">
+                        <h5>Brazo de Reina</h5>
+                        <p class="ingredientes-carrusel">Porcion de brazo de reina - $3.490</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPostres" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPostres" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
     </main>
 </div>
 
 <script>
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navbarLinks = document.getElementById('navbar-links');
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarLinks = document.getElementById('navbar-links');
+        const categoryButtons = document.querySelectorAll('.categoria-btn');
+        const categoryCarousels = document.querySelectorAll('.categoria-carousel');
 
-    mobileMenu.addEventListener('click', () => {
-        navbarLinks.classList.toggle('active');
+        mobileMenu.addEventListener('click', function() {
+            navbarLinks.classList.toggle('active');
+            this.classList.toggle('open');
+        });
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const categoryId = this.getAttribute('for');
+
+                categoryCarousels.forEach(carousel => {
+                    carousel.classList.remove('active');
+                });
+
+                const activeCarousel = document.getElementById(`carousel${categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}`);
+                if (activeCarousel) {
+                    activeCarousel.classList.add('active');
+                }
+            });
+        });
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
