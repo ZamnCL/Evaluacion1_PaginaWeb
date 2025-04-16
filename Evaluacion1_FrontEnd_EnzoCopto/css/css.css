@@ -300,3 +300,61 @@ input[type="radio"]:checked + .categoria-btn {
         margin-bottom: 20px;
     }
 }
+
+#historia {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#historia .card-title {
+    color: #a75502;
+    margin-bottom: 0.75rem;
+}
+
+#historia .card-text {
+    font-size: 0.9rem;
+}
+
+#historia .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+#historia .seccion-titulo {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    #historia .row-cols-md-2 > * {
+        flex-basis: 100%;
+        width: 100% !important;
+    }
+    #historia .row-cols-lg-3 > * {
+        flex-basis: 100%;
+        width: 100% !important;
+    }
+}
+
+#sucursales {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#sucursales .card-title {
+    color: #a75502;
+    margin-bottom: 1rem;
+}
+
+#sucursales .img-fluid {
+    max-height: 170px;
+    object-fit: cover;
+}
+
+#sucursales .ratio {
+    height: 150px !important; 
+}
+
+#sucursales strong {
+    color: #a75502;
+}
+
